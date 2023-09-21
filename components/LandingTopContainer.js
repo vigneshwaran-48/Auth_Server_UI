@@ -10,6 +10,13 @@ const LandingTopContainer = () => {
                 <p>Unlock a world of seamless access with OpenID 
                     – Your key to a simpler, more secure online experience</p>
             </div>
+            <div className="access-profile-button-wrapper x-axis-flex">
+                <a href="http://127.0.0.1:9292">
+                    <button 
+                        className="common-button access-profile-button"
+                    >Access Profile</button>
+                </a>
+            </div>
             <img 
                 className="landing-top-back-image" 
                 src="/secure.jpg" alt="lock"/>

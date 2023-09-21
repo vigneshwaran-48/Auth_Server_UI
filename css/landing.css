@@ -11,7 +11,6 @@
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     position: relative;
-    height: 35%;
     justify-content: space-between;
     align-items: center;
 }
@@ -70,6 +69,17 @@
     max-width: 420px;
 }
 
+.access-profile-button-wrapper {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.access-profile-button {
+    background-color: rgb(125,146,255);
+    color: white;
+}
 
 /* Landing page body styling starts here */
 
@@ -142,5 +152,9 @@
     .landing-main-box-container > img {
         width: 75px;
         height: 75px;
+    }
+    .access-profile-button {
+        font-size: 14px;
+        padding: 4px;
     }
 }
