@@ -1,0 +1,146 @@
+
+.landing-page {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+.landing-page::-webkit-scrollbar {
+    display: none;
+}
+.landing-top-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: relative;
+    height: 35%;
+    justify-content: space-between;
+    align-items: center;
+}
+.landing-header {
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+}
+.header-content-wrapper {
+    max-width: 1800px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+.header-content-wrapper > img {
+    width: 40px;
+}
+.landing-top-nav {
+    justify-content: space-between;
+    padding: 5px 10px;
+    max-width: 135px;
+    width: 80%;
+}
+.landing-top-nav > a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    font-weight: 800;
+}
+.landing-top-nav > a:hover {
+    border-color: white;
+}
+
+.landing-top-back-image {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.landing-top-text-container {
+    max-width: 1800px;
+    width: 95%;
+    height: 80%;
+    margin-top: 40px;
+    padding-left: 40px;
+}
+.landing-top-text-container > h1 {
+    margin-bottom: 5px;
+}
+.landing-top-text-container > p {
+    max-width: 420px;
+}
+
+
+/* Landing page body styling starts here */
+
+.landing-main {
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+}
+.landing-main-box-container-wrapper {
+    max-width: 1500px;
+    width: 90%;
+    margin-top: 20px;
+}
+.landing-main-box-container {
+    align-items: center;
+    max-width: 780px;
+    width: 100%;    
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.landing-main-box-container:hover {
+    transform: scale(1.1);
+}
+.landing-main-box-container > img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+}
+.landing-main-box-content {
+    max-width: 600px;
+    width: fit-content;
+    line-height: 1.4;
+}
+.align-right {
+    justify-content: flex-end;
+}
+.align-content-right {
+    flex-direction: row-reverse;
+}
+
+
+/* Landing page footer styling starts here */
+
+.landing-footer {
+    width: 100%;
+    height: 20%;    
+    background-color: black;
+}
+
+@media screen and (max-width: 380px) {
+    
+    .landing-top-text-container > h1 {
+        font-size: 24px;
+    }
+    .landing-main-box-container > img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 300px) {
+    
+    .landing-top-text-container > h1 {
+        font-size: 20px;
+    }
+    .landing-top-text-container > p {
+        font-size: 14px;
+    }
+    .landing-main-box-container > img {
+        width: 75px;
+        height: 75px;
+    }
+}
