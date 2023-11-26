@@ -7,7 +7,7 @@ export const RoutesManager = {
 
 export const ServerAPIManager = {
     
-    resourceServerBase: "http://127.0.0.1:9393",
+    resourceServerBase: `http://${window.location.hostname}:9393`,
     userCreateAPI: "/api/user",
     userInfoAPI: "/api/user/me",
     userLoginAPI: "/authenticate"
