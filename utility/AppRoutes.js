@@ -9,11 +9,17 @@ let appRoutes = {};
 
 export const ServerAPIManager = {
     
-    resourceServerBase: `http://${window.location.hostname}:9393`,
+    resourceServerBase: ``,
     userCreateAPI: "/api/user",
     userInfoAPI: "/api/user/me",
     userLoginAPI: "/authenticate",
-
+    userAPI: "/api/user",
+    clientAPI: userId => {
+        return `/api/user/${userId}/client`
+    },
+    populateRoutes: routes => {
+        appRoutes = routes;
+    },
     getAppRoutes: async () => {
         if(!appRoutes || !Object.keys(appRoutes).length) {
 

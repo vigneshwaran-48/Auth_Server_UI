@@ -116,7 +116,6 @@ const CreateApp = () => {
                         }}
                     />
                 </div>
-                <input hidden name="path" />
                 <button 
                     className="common-button client-app-create-button"
                     disabled={navigation.state === "submitting"}

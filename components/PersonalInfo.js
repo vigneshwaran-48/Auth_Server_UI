@@ -21,24 +21,7 @@ export const personalInfoAction = async ({ params, request }) => {
     const formData = await request.formData();
     const data = Object.fromEntries(formData);
 
-    const splittedDate = data.dob.split("-");
-    if(splittedDate) {
-        data.dob = formatDate(...splittedDate);
-    }
-
     return UserAPI.updateUser(data);
-}
-const formatDate = (year, month, day) => {
-    day = day?.toString().slice(0, 2);
-    month = month?.toString().slice(0, 2);
-    year = year?.toString().slice(0, 4);
-    return Common.checkAndGiveDoubleDigit(year) + "-" + 
-           Common.checkAndGiveDoubleDigit(month) + "-" +
-           Common.checkAndGiveDoubleDigit(day);
-}
-const formatDayJsDate = dayJsDate => {
-    let {$D, $y, $M} = dayJsDate;
-    return formatDate($y, $M, $D);               
 }
 
 const fieldLengthObj = {
@@ -95,11 +78,13 @@ const PersonalInfo = () => {
     }
 
     const handleDateChange = newValue => {
-
+        const dateStr = Common.checkAndGiveDoubleDigit(newValue.$y + "") + "-" + 
+                        Common.checkAndGiveDoubleDigit((newValue.$M + 1) + "") + "-" +
+                        Common.checkAndGiveDoubleDigit(newValue.$D + "");
         setUserDetails(prevUserDetails => {
             return {
                 ...prevUserDetails,
-                dob: formatDayJsDate(newValue)
+                dob: dateStr
             }
         });
     }
@@ -232,7 +217,7 @@ const PersonalInfo = () => {
                         className="accounts-input-wrapper user-date-wrapper y-axis-flex">
                         <DatePicker 
                             label="Date of Birth" 
-                            value={dayjs(userDetails.dob)} 
+                            value={dayjs(new Date(userDetails.dob))} 
                             onChange={handleDateChange} 
                             views={["year", "month", "day"]}
                             disableFuture

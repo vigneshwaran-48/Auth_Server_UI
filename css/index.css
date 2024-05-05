@@ -145,6 +145,18 @@ body, html, #root {
     margin-top: 20px;
     height: fit-content;
 }
+.nothing-to-show-comp {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.nothing-to-show-comp > img {
+    max-width: 550px;
+    width: 90%;
+    margin-bottom: 20px;
+}
 .top-user-image-container {
     flex-grow: 1;
     height: 100%;
@@ -198,5 +210,8 @@ body, html, #root {
 @media screen and (max-width: 500px) {
     .error-404 {
         justify-content: center;
+    }
+    .form {
+        grid-template-columns: 100%;
     }
 }
