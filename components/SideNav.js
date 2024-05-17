@@ -8,7 +8,7 @@ const SideNav = ({ className }) => {
     const handleLogout = async () => {
         const response = await UserAPI.logout();
         if(response.ok) {
-            window.location.href = "http://localhost:9090/logout";
+            window.location.href = `${window.location.origin}/logout`;
         }
     }
     
