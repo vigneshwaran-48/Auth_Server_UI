@@ -5,14 +5,14 @@ let closeOnFocusOutElems = [{
     closeElem: () => {}
 }]; 
 
-const emailRegex = /^[\w\d]{5,15}@proapp\.com$/;
+const emailRegex = /^[\w\d]{5,15}@vapps\.com$/;
 const mobileRegex = /^[\d]{8,15}$/;
 let errorPopupTimeoutId = -1;
 let successPopupTimeoutId = -1;
 
 export const Common = {
 
-    appName: "ProApp",
+    appName: "Vapps",
     appDomain: "",
     appIcon: "/app-icon.png",
 

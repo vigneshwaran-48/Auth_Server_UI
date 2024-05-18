@@ -108,7 +108,7 @@ const CreateApp = () => {
                     <label>Redirect URIs</label>
                     <input 
                         name="redirectUris"
-                        placeholder="https://proapp-client.com/home"
+                        placeholder="https://vapps-client.com/home"
                         onChange={ handleChange }
                         style={{
                             borderColor: fieldState.redirectUris ? 
