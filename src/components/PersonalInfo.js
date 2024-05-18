@@ -54,7 +54,7 @@ const PersonalInfo = () => {
         mobile: true
     })
 
-    const [ profileImage, setProfileImage ] = useState("app-icon.png");
+    const [ profileImage, setProfileImage ] = useState("/app-icon.png");
 
     const app = useApp();
 

@@ -11,7 +11,7 @@ const LandingTopContainer = () => {
                     – Your key to a simpler, more secure online experience</p>
             </div>
             <div className="access-profile-button-wrapper x-axis-flex">
-                <a href="http://127.0.0.1:9292">
+                <a href="/">
                     <button 
                         className="common-button access-profile-button"
                     >Access Profile</button>
