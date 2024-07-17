@@ -70,5 +70,22 @@ export const ClienAPI = {
                                     body: JSON.stringify(data)
                                 });
         return response;
+    },
+    isClientNameExists: async clientName => {
+        const routes = await ServerAPIManager.getAppRoutes();
+        const url = routes.client.base + "/" + clientName + "/exists";
+        const csrfToken = Cookies.get("XSRF-TOKEN");
+
+        const response = await fetch(url, {
+                                    method: "GET",
+                                    headers: {
+                                        "X-XSRF-TOKEN": csrfToken
+                                    }
+                                });
+        if (response.ok) {
+            const data = await response.json();
+            return data.clientExists;
+        }
+        return false;
     }
 }

@@ -5,7 +5,7 @@ const Error404 = () => {
     return (
         <div className="error-404 y-axis-flex">
             <div className="error404-header x-axis-flex">
-                <h1>ProApp</h1>
+                <h1>Vapps</h1>
             </div>
             <div className="error404-img-wrapper y-axis-flex">
                 <img src="error404.png" alt="404 error"/>

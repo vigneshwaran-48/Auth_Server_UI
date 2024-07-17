@@ -26,6 +26,10 @@ export const createAppAction = async ({params, request}) => {
             Common.showSuccessPopup("Client created successfully", 3);
             return redirect("../list/" + data.clientId);
         }
+        else if (response.status === 400) {
+            const data = await response.json();
+            Common.showErrorPopup(data.error, 3);
+        }
         else {
             Common.showErrorPopup("Error while creating client", 3);
         }
@@ -43,7 +47,7 @@ const CreateApp = () => {
 
     const navigation = useNavigation();
 
-    const handleChange = event => {
+    const handleChange = async event => {
         const { name, value } = event.target;
         let fieldStateValue = true;
 
@@ -51,7 +55,12 @@ const CreateApp = () => {
             !Common.checkLength(value, Common.minNameLength, maxLengthObj.name)) {
             fieldStateValue= false;
         }
-       
+
+        const clientNameRegex = /^[a-zA-Z0-9.]+$/;
+        if (name === "clientName" && (!clientNameRegex.test(value) || await ClienAPI.isClientNameExists(value))) {
+            fieldStateValue= false;
+        }
+
         setFieldState(prevState => {
             return {
                 ...prevState,
@@ -108,7 +117,7 @@ const CreateApp = () => {
                     <label>Redirect URIs</label>
                     <input 
                         name="redirectUris"
-                        placeholder="https://proapp-client.com/home"
+                        placeholder="https://vapps-client.com/home"
                         onChange={ handleChange }
                         style={{
                             borderColor: fieldState.redirectUris ? 

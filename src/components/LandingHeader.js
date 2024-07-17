@@ -6,10 +6,10 @@ const LandingHeader = () => {
     return (
         <header className="landing-header x-axis-flex">
             <div className="header-content-wrapper x-axis-flex">
-                <img src="app-icon.png" alt="app-icon" />
+                <img src="/app-icon.png" alt="app-icon" />
                 <nav className="landing-top-nav x-axis-flex">
-                    <Link to="oauth">LogIn</Link>
-                    <Link to="oauth/sign-up">Sign Up</Link>
+                    <Link to="/oauth">LogIn</Link>
+                    <Link to="/oauth/sign-up">Sign Up</Link>
                 </nav>
             </div>
         </header>

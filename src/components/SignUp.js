@@ -34,7 +34,7 @@ const SignUp = () => {
         }
         else if(response.status !== 404) {
             const responseJson = await response.json();
-            showError(responseJson);
+            showError(responseJson.message.error);
         }
         else {
             showError("Oops! Something went wrong");

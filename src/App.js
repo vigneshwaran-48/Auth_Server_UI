@@ -10,7 +10,7 @@ import SignUp from "./components/SignUp";
 import { Common } from "./utility/Common";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import  Accounts from "./pages/Accounts";
+import  Accounts, { accountsLoader } from "./pages/Accounts";
 import Home, { homeLoader } from "./components/Home";
 import PersonalInfo, { 
     personalInfoAction,
@@ -35,7 +35,7 @@ const routes = createBrowserRouter(createRoutesFromElements(
             <Route index element={<Login />} />
             <Route path="sign-up" element={<SignUp />} />
         </Route>
-        <Route path="" element={<Accounts />}>
+        <Route path="" element={<Accounts />} loader={accountsLoader}>
             <Route 
                 index 
                 element={<Home />} 
