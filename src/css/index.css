@@ -194,6 +194,97 @@ body, html, #root {
     width: 80%;
     max-width: 700px;
 }
+
+.full-width {
+    width: 100%;
+}
+
+.consent-form {
+    max-width: 800px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  .plus {
+    font-size: 32px;
+    font-weight: 900;
+  }
+  
+  .vapps-client-header {
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .vapps-client-header > * {
+    margin: 0px 10px;
+  }
+  .consent-form-message {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0px;
+    max-width: 500px;
+  }
+  .client-name {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .client-with-scope {
+    margin: 10px 0px;
+  }
+  .client-with-scope > li {
+    align-items: center;
+  }
+  .client-with-scope > li > p {
+    margin-left: 5px;
+  }
+
+  .client-scopes-list {
+    padding-left: 10px;
+  }
+
+  .consent-form-button-container {
+    max-width: 200px;
+    width: 100%;
+    justify-content: space-around;
+  }
+.approve-button, .deny-button {
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 18px;
+    background-color: #3E54F5;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.deny-button {
+    background-color: transparent;
+    color: #3E54F5;
+    border: 1px solid #3E54F5;
+    font-weight: 700;
+}
+
+.consent-form-warn-message-container {
+    margin: 20px 0px;
+    text-align: center;
+}
+.consent-form-warn-message {
+    font-size: 18px;
+    font-weight: 700;
+}
+.consent-scope-label > p {
+    margin-left: 5px;
+}
+.client-container {
+    margin: 20px 0px;
+}
+.deny-button:active, .approve-button:active {
+    transform: scale(0.9);
+}
 @media screen and (max-width: 910px) {
     
     .credential-left-part {

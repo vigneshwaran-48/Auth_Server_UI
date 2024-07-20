@@ -25,6 +25,7 @@ import Loading from "./utility/Loading";
 import ErrorComp from "./utility/ErrorComp";
 import Error404 from "./utility/Error404";
 import Landing from "./pages/Landing.js";
+import Consent, { consentLoaderData } from "./components/Consent.js";
 
 
 
@@ -34,6 +35,7 @@ const routes = createBrowserRouter(createRoutesFromElements(
         <Route path="oauth" element={<Credentials />}>
             <Route index element={<Login />} />
             <Route path="sign-up" element={<SignUp />} />
+            <Route path="consent" element={<Consent />} loader={consentLoaderData} />
         </Route>
         <Route path="" element={<Accounts />} loader={accountsLoader}>
             <Route 
