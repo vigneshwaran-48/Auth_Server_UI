@@ -39,17 +39,25 @@
     display: none;
 }
 
-.client-app-input-wrapper {
+.client-app-input-wrapper, .client-app-checkbox-wrapper {
     max-width: 500px;
     margin: 20px 0px;
 }
-.client-app-input-wrapper > input {
+.client-app-input-wrapper > input, .client-app-checkbox-wrapper > input {
     width: 100%;
     border: none;
     outline: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px 0px;
     font-size: 20px;
+}
+.client-app-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.client-app-checkbox-wrapper > label {
+  white-space: nowrap;
 }
 .client-app-create-button {
     max-width: 250px;
